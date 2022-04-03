@@ -21,5 +21,13 @@
         "psr-4": {
             "Ayangzy\\Contact\\": "src/"
         }
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ayangzy\\Contact\\ContactServiceProvider"
+            ]
+        }
     }
 }
