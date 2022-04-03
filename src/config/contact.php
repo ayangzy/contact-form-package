@@ -2,5 +2,16 @@
 
 
 return [
-    'send_email_to' => 'johndoe@gmail.com'
+     /*
+    |--------------------------------------------------------------------------
+    | Contact Mail
+    |--------------------------------------------------------------------------
+    |
+    | Email to send the messages sent by the people who fill the contact form
+    |
+    | Supported: Valid email adress. Example: "john.doe@example.com"
+    |
+    */
+
+    'send_email_to' => env('CONTACT_MAIL_TO', 'johndoe@example.com'),
 ];
