@@ -1,0 +1,25 @@
+{
+    "name": "ayangzy/contact",
+    "description": "A simple package that add contact form to your laravel application, send email to admin and save contact query to the database",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ayangzy\\Contact\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayange Felix",
+            "email": "ayangefelix8@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload-dev": {
+        "psr-4": {
+            "Ayangzy\\Contact\\": "src/"
+        }
+    }
+}
