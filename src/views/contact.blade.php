@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
  
     <title>Contact Us</title>
 </head>
@@ -141,8 +142,27 @@ input[type=checkbox]:checked + label {
 }
 </style>
 <body>
-   
+
     <div class="container">
+
+        @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
+
+        @if (session('error'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
+   
         <div class="row">
                 <h1>contact us</h1>
         </div>
@@ -179,3 +199,4 @@ input[type=checkbox]:checked + label {
     </div>
 </body>
 </html>
+

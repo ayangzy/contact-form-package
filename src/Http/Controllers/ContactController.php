@@ -19,15 +19,13 @@ class ContactController extends Controller
 
     public function send(Request $request)
     {
-        
-       if(Contact::where('email', $request->email)->exists()){
-            return redirect()->back();
-       }
+
+        if (Contact::where('email', $request->email)->exists()) {
+            return back()->withError('Contact with this email already exist!');
+        }
 
         Contact::create($request->all());
         Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message, $request->name));
-        return redirect(route('index'));
+        return back()->withSuccess('Thank you for contacting us, we will reach out to you soon!');
     }
-
-
 }
